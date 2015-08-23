@@ -1,0 +1,29 @@
+<header id="app-bar" class="mdl-layout__header">
+	<div class="mdl-layout__header-row">
+        {{! Title }}
+		<span class="mdl-layout-title">{{@blog.title}}</span>
+        {{! Add spacer, to align navigation to the right }}
+		<div class="mdl-layout-spacer"></div>
+        {{! Top level navigation }}
+		<nav class="mdl-navigation mdl-layout--large-screen-only">
+            {{! Add links in this scheme: <a class="mdl-navigation__link" href="[URL]">[TITLE]</a> }}
+			<a class="mdl-navigation__link" href="/">Home</a>
+			<a class="mdl-navigation__link" href="/about">About me</a>
+			<a class="mdl-navigation__link" href="/android-apps">Apps</a>
+			<a class="mdl-navigation__link" href="/websites">Websites</a>
+		</nav>
+	</div>
+</header>
+
+<div class="mdl-layout__drawer">
+	<span class="mdl-layout-title">{{@blog.title}}</span>
+	<nav class="mdl-navigation">
+
+        {{#foreach navigation}}
+			<a class="mdl-navigation__link navigation-{{slug}} {{#if current}} mdl-navigation__link--current{{/if}}"
+			   href="{{url absolute="true"}}">{{label}}</a>
+        {{/foreach}}
+
+	</nav>
+</div>
+

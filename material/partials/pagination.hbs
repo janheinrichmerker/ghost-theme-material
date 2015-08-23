@@ -1,0 +1,19 @@
+<nav class="mdl-cell mdl-cell--12-col mdl-color-text--white mdl-typography--subhead pagination">
+    {{#if next}}
+		<a class="pagination-older" href="{{page_url next}}" title="Older Posts">
+			<button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect">
+				<i class="material-icons">arrow_back</i>
+			</button>
+			Older Posts
+		</a>
+    {{/if}}
+	<span>Page {{page}} of {{pages}}</span>
+    {{#if prev}}
+		<a class="pagination-newer" href="{{page_url prev}}" title="Newer Posts">
+			Newer Posts
+			<button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect">
+				<i class="material-icons">arrow_forward</i>
+			</button>
+		</a>
+    {{/if}}
+</nav>

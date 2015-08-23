@@ -1,0 +1,30 @@
+{{! This is the post loop - each post will be output using this markup }}
+<div class="mdl-grid posts">
+    {{#foreach posts}}
+		<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col {{post_class}}">
+			<div class="mdl-card__title">
+				<h2 class="mdl-card__title-text">{{{title}}}</h2>
+			</div>
+			<div class="mdl-card__supporting-text mdl-color-text--grey-600">
+                {{excerpt words="50"}}…
+			</div>
+			<div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+                {{#if author.image}}<a href="{{#author}}{{url}}{{/author}}"><img class="author-thumb"
+																				 src="{{author.image}}"
+																				 alt="{{author.name}}"></a>{{/if}}
+				<a class="mdl-button mdl-js-button mdl-js-ripple-effect" id="author-tooltip-{{id}}"
+				   href="{{author.url}}">{{author.name}}</a>
+				<span class="mdl-tooltip" for="author-tooltip-{{id}}">{{author.bio}}</span>
+                {{#if tags}}<span>{{tags prefix="on "}}</span>{{/if}}
+				<time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+			</div>
+			<div class="mdl-card__actions mdl-card--border">
+				<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{url}}">Read
+					more</a>
+			</div>
+		</div>
+    {{/foreach}}
+
+    {{! Previous/next page links - displayed on every page }}
+    {{pagination}}
+</div>
