@@ -4,7 +4,7 @@ var appBar = document.getElementById('app-bar');
 
 blogLayout.addEventListener("scroll", checkScrolled);
 
-function checkScrolled(){
+function checkScrolled() {
 	var body = document.body;
 	var scroll = blogLayout.scrollTop;
 	if(scroll > 0){
@@ -19,7 +19,7 @@ function scrollDown(){
 	scrollBy(blogLayout, cover.getBoundingClientRect().bottom - appBar.offsetHeight + 1, 500);
 }
 
-function scrollTo(element, to, duration){
+function scrollTo(element, to, duration) {
 	var start = element.scrollTop,
 		change = to - start,
 		currentTime = 0,
@@ -28,13 +28,13 @@ function scrollTo(element, to, duration){
 	var animateScroll = function(){
 		currentTime += increment;
 		element.scrollTop = Math.easeInOutQuad(currentTime, start, change, duration);
-		if(currentTime < duration){
+		if(currentTime < duration) {
 			setTimeout(animateScroll, increment);
 		}
 	};
 	animateScroll();
 }
-function scrollBy(element, by, duration){
+function scrollBy(element, by, duration) {
 	var start = element.scrollTop;
 	scrollTo(element, start + by, duration)
 }
@@ -47,11 +47,11 @@ function scrollBy(element, by, duration){
  * @param d duration
  * @returns current value
  */
-Math.easeInOutQuad = function(t, b, c, d){
-	t /= d / 2;
-	if(t < 1) return c / 2 * t * t + b;
+Math.easeInOutQuad = function (t, b, c, d) {
+	t /= d/2;
+	if (t < 1) return c/2*t*t + b;
 	t--;
-	return -c / 2 * (t * (t - 2) - 1) + b;
+	return -c/2 * (t*(t-2) - 1) + b;
 };
 
 hljs.initHighlightingOnLoad();

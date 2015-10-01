@@ -20,8 +20,7 @@
 	<nav class="mdl-navigation">
 
         {{#foreach navigation}}
-			<a class="mdl-navigation__link navigation-{{slug}} {{#if current}} mdl-navigation__link--current{{/if}}"
-			   href="{{url absolute="true"}}">{{label}}</a>
+			<a class="mdl-navigation__link navigation-{{slug}} {{#if current}} mdl-navigation__link--current{{/if}}" href="{{url absolute="true"}}">{{label}}</a>
         {{/foreach}}
 
 	</nav>

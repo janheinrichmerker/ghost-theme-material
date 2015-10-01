@@ -1,63 +1,62 @@
 <!doctype html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="{{meta_description}}">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>{{meta_title}}</title>
+    <head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="{{meta_description}}">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{{meta_title}}</title>
 
-    {{! Add to homescreen for Chrome on Android }}
-	<meta name="mobile-web-app-capable" content="yes">
-    {{!<link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">}}
+        {{! Add to homescreen for Chrome on Android }}
+		<meta name="mobile-web-app-capable" content="yes">
+		{{!<link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">}}
 
-    {{! Add to homescreen for Safari on iOS }}
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta name="apple-mobile-web-app-title" content="{{@blog.title}}">
-    {{!<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">}}
+        {{! Add to homescreen for Safari on iOS }}
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="{{@blog.title}}">
+		{{!<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">}}
 
-    {{! Tile icon for Win8 (144x144 + tile color)
-    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileColor" content="#3372DF">}}
+        {{! Tile icon for Win8 (144x144 + tile color)
+		<meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+		<meta name="msapplication-TileColor" content="#3372DF">}}
 
-	<link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en"
-		  rel="stylesheet">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="{{asset "css/material.min.css"}}">
-	<link rel="stylesheet" href="{{asset "css/styles.css"}}">
-	<link rel="stylesheet" href="{{asset "css/highlight.css"}}">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="{{asset "css/material.min.css"}}">
+		<link rel="stylesheet" href="{{asset "css/styles.css"}}">
+		<link rel="stylesheet" href="{{asset "css/prism.css"}}">
 
-    {{! Ghost outputs important style and meta data with this tag }}
-    {{ghost_head}}
-</head>
-<body class="{{body_class}}">
+        {{! Ghost outputs important style and meta data with this tag }}
+        {{ghost_head}}
+    </head>
+    <body class="{{body_class}}">
 
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--overlay-drawer-button">
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--overlay-drawer-button">
 
-    {{navigation}}
+            {{navigation}}
 
-	<main class="mdl-layout--content">
+            <main class="mdl-layout--content">
 
-        {{! Everything else gets inserted here }}
-        {{{body}}}
+                {{! Everything else gets inserted here }}
+                {{{body}}}
 
-        {{! The tag below includes the footer - partials/footer.hbs }}
-        {{> footer}}
+                {{! The tag below includes the footer - partials/footer.hbs }}
+                {{> footer}}
 
-	</main>
+            </main>
 
-	<div class="mdl-layout__obfuscator"></div>
+            <div class="mdl-layout__obfuscator"></div>
 
-</div>
+        </div>
 
-<script src="{{asset "js/material.min.js"}}"></script>
-<script src="{{asset "js/highlight.min.js"}}"></script>
-<script src="{{asset "js/scripts.js"}}"></script>
+		<script src="{{asset "js/material.min.js"}}"></script>
+		<script src="{{asset "js/prism.min.js"}}"></script>
+		<script src="{{asset "js/scripts.js"}}"></script>
 
-{{! Ghost outputs important scripts and data with this tag }}
-{{ghost_foot}}
+        {{! Ghost outputs important scripts and data with this tag }}
+        {{ghost_foot}}
 
-</body>
+    </body>
 
 </html>

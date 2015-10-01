@@ -7,22 +7,20 @@
 {{#post}}
 
 	<article class="{{post_class}}">
-		<header>
+        <header>
 			<h1>{{title}}</h1>
-
 			<p class="mdl-typography--headline">
 				<time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
                 {{#if tags}}<span>{{tags prefix=" on "}}</span>{{/if}}
 			</p>
-		</header>
-		<section>
+        </header>
+        <section>
             {{content}}
-		</section>
-		<footer>
+        </section>
+        <footer>
             {{#author}}
 				<section class="author">
-                    {{#if image}}<a href="{{url}}"><img class="mdl-shadow--4dp" src="{{image}}"
-														alt="{{name}}"></a>{{/if}}
+                    {{#if image}}<a href="{{url}}"><img class="mdl-shadow--4dp" src="{{image}}" alt="{{name}}"></a>{{/if}}
 					<h4><a href="{{url}}">{{name}}</a></h4>
 
                     {{#if bio}}
@@ -32,55 +30,45 @@
                     {{/if}}
 
 					<p class="author-meta">
-                        {{#if location}}<a href="https://www.google.de/maps/search/{{encode location}}/" target="_blank"
-										   title="{{location}}"><i class="material-icons">place</i> {{location}}
-						</a>{{#if website}} ⋯ {{/if}}{{/if}}
-                        {{#if website}}<a href="{{website}}" target="_blank" title="{{name}}"><i class="material-icons">link</i> {{website}}
-						</a>{{/if}}
+                        {{#if location}}<a href="https://www.google.de/maps/search/{{encode location}}/" target="_blank" title="{{location}}"><i class="material-icons">place</i> {{location}}</a>{{#if website}} ⋯ {{/if}}{{/if}}
+                        {{#if website}}<a href="{{website}}" target="_blank" title="{{name}}"><i class="material-icons">link</i> {{website}}</a>{{/if}}
 					</p>
 				</section>
             {{/author}}
 
-			<section class="share">
+            <section class="share">
 				<h4>Share this post on…</h4>
-				<a class="mdl-button mdl-js-button mdl-button--icon"
-				   href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+				<a class="mdl-button mdl-js-button mdl-button--icon" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
 				   onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-					<img src="{{asset "images/icon-twitter.svg"}}" alt="Twitter">
-				</a>
-				<a class="mdl-button mdl-js-button mdl-button--icon"
-				   href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                    <img src="{{asset "images/icon-twitter.svg"}}" alt="Twitter">
+                </a>
+				<a class="mdl-button mdl-js-button mdl-button--icon" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
 				   onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
 					<img src="{{asset "images/icon-facebook.svg"}}" alt="Facebook">
-				</a>
-				<a class="mdl-button mdl-js-button mdl-button--icon"
-				   href="https://plus.google.com/share?url={{url absolute="true"}}"
+                </a>
+				<a class="mdl-button mdl-js-button mdl-button--icon" href="https://plus.google.com/share?url={{url absolute="true"}}"
 				   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
 					<img src="{{asset "images/icon-google-plus.svg"}}" alt="Google+">
-				</a>
-			</section>
-		</footer>
+                </a>
+            </section>
+        </footer>
 	</article>
 
-	<aside class="read-next">
+    <aside class="read-next">
         {{#prev_post}}
-			<section class="prev">
-				<h3>{{title}}</h3>
-
-				<p>{{excerpt words="20"}}…</p>
-				<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{url}}">Read
-					more</a>
-			</section>
+            <section class="prev">
+                <h3>{{title}}</h3>
+                <p>{{excerpt words="20"}}…</p>
+				<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{url}}">Read more</a>
+            </section>
         {{/prev_post}}
         {{#next_post}}
 			<section class="next">
 				<h3>{{title}}</h3>
-
 				<p>{{excerpt words="20"}}…</p>
-				<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{url}}">Read
-					more</a>
+				<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{url}}">Read more</a>
 			</section>
         {{/next_post}}
-	</aside>
+    </aside>
 
 {{/post}}
