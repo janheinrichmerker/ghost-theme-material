@@ -1,21 +1,18 @@
-Ghost Material (MDL)
-===
-
+# ghost-theme-material
 A theme for [Ghost](http://github.com/tryghost/ghost/) implementing Material design guidelines using [Material Design Lite](http://www.getmdl.io/).
-This theme can be seen at my personal blog: [Heinrich Reimer Software](http://heinrichreimersoftware.com/)
+This theme has previously been deployed on my blog: [Heinrich Reimer Software](http://heinrichreimersoftware.com/)
 
-Screenshots
----
+## Screenshots
 Below are some screenshots that show the theme in action.
 
-**Home:**
+### Home
 ![Home](http://i.imgur.com/LzGITEO.jpg)
 
-**Post:**
+### Post
 ![Post](http://i.imgur.com/fBbp0k7.png)
 
-**Tags:**
+### Tags
 ![Tags](http://i.imgur.com/yeG4Emg.jpg)
 
-**Author:**
+### Author
 ![Author](http://i.imgur.com/qZHnaE3.jpg)
