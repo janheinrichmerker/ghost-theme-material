@@ -1,4 +1,4 @@
-# ghost-theme-material
+# 👻 ghost-theme-material
 A theme for [Ghost](http://github.com/tryghost/ghost/) implementing Material design guidelines using [Material Design Lite](http://www.getmdl.io/).
 This theme has previously been deployed on my blog: [Heinrich Reimer Software](http://heinrichreimersoftware.com/)
 
